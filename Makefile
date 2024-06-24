@@ -24,12 +24,6 @@ primeCounter: primeCounter.c
 #	$(CC) $(CFLAGS) -o $@ $<
 	$(CC) -o primeCounter primeCounter.c
 
-anna: anna.c
-	$(CC) -o anna anna.c -lm
-
-liav: liav.c
-	$(CC) -o liav liav.c
-
 MyPrimeCounter: MyPrimeCounter.c
 	$(CC) -o MyPrimeCounter MyPrimeCounter.c
 
