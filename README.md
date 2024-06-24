@@ -29,17 +29,15 @@ MyPrimeCounter: this is the runable file connected to MyPrimeCounter.c ``` ./ran
 ## This repository involves
 a) The best solution code. </br>
 and in the README: </br>
-c) Screenshot with 10M numbers checked by our solution + time </br>
-d) proof of RAM usage below 2MB </br>
 
 ## Time improvement:
 Screenshot with 10M numbers checked by the provided primeCounter.c + time </br>   
 ![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/all%20original.png)
 
-Screenshot with 10M numbers checked by the MyPrimeCounter.c with original prime function + threads + time </br>  
+Screenshot with 10M numbers checked by the MyPrimeCounter.c with original prime function + threads + time, this is arownd 4 times better. </br>  
 ![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/original%20prime%20add%20threads.png)
 
-Screenshot with 10M numbers checked by our solution better prime function and threads  + time </br>   
+Screenshot with 10M numbers checked by our solution better prime function and threads  + time, this is arownd 10 times better. </br>   
 ![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/new%20peime%20and%20threads%20.png)
 
 ## RAM space:
