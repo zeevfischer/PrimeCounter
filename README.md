@@ -5,14 +5,26 @@ You have an endless data stream that should be processed fast. For example, secu
 intrusion should be detected.</br>
 In this assignment, we will use a random number generator that simulates the endless stream, the task is to count the number of prime numbers in this stream.</br>
 
-The task in detail:</br>
-We have a random number generator called randomGenerator.c and a basic implementation of the prime counter app, called primeCounter.c
-The usage of the generator is as follows:</br>
-``` ./randomGenerator <seed> <num_of_numbers> ``` </br>
-example: </br>
-``` ./randomGenerator 10 10 ``` will give you 10 numbers, generated with random seed 10. </br>
-Usage of the counter: </br>
-``` ./randomGenerator 10 100 | ./primesCounter ``` the expected output is 5 total primes. </br>
+File explanation:</br>
+**generator.c:**    
+This file will creat random numbers that simulates the endless stream, we will be piping the out put from this program to the next file.   
+
+**primeCounter.c**    
+This is the inithal code given this will get the endless stream from compiling and runing generator.c and for every number check if is a prime number and sum the amount of primes.   
+
+**MyPrimeCounter.c**    
+This is my code that is the solution of the assiment given:   
+isPrime function: the original function given.      
+is_prime function: is my new function for checking prime numbers.     
+Threads function: to manage the threads.    
+main function: to run it all.   
+**Note: when running this code you need to change in it the prime function you want to run !!**
+
+**Makefile**
+runing ``` make all ``` will creat the following files we can run:   
+randomGenerator: this is the runable file connected to generator.c ``` ./randomGenerator <seed> <num_of_numbers> ```      
+primeCounter: this is the runable file connected to primeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./primesCounter ```   
+MyPrimeCounter: this is the runable file connected to MyPrimeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./MyPrimeCounter ```   
 
 ## This repository involves
 a) The best solution code. </br>
