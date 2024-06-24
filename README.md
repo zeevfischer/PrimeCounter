@@ -29,38 +29,25 @@ MyPrimeCounter: this is the runable file connected to MyPrimeCounter.c ``` ./ran
 ## This repository involves
 a) The best solution code. </br>
 and in the README: </br>
-b) Screenshot with 10M numbers checked by the provided primeCounter.c + time </br>
 c) Screenshot with 10M numbers checked by our solution + time </br>
 d) proof of RAM usage below 2MB </br>
 
-## How to run
-1. ``` make all ```
-2. ``` ./randomGenerator <seed> <num_of_numbers> | ./primeCounter ```
-
-For example:
-1. ``` make all ```
-2. ``` ./randomGenerator 10 10000 | ./primeCounter ```
-
-To see the time:
-1. ``` make all ```
-2. ``` time ./randomGenerator 10 10000 | ./primeCounter ```
-
-To see the usage of RAM:
-1. ``` make all ```
-2. ``` valgrind --tool=massif --massif-out-file=massif.out ./randomGenerator 10 10000 | ./primeCounter  ```
-3. ``` ms_print massif.out ```
- 
-
 ## Time improvement:
-Base code:
-![image](https://github.com/annapinchuk/thread_safe_prime_counter/assets/78349342/400ad7d4-295d-4b78-b362-8dd170faf42e)
+Screenshot with 10M numbers checked by the provided primeCounter.c + time </br>   
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/all%20original.png)
 
-Better isPrime function:
-![image](https://github.com/annapinchuk/thread_safe_prime_counter/assets/78349342/90164e16-bca2-4856-999b-78e6b5bdcb04)
+Screenshot with 10M numbers checked by the MyPrimeCounter.c with original prime function + threads + time </br>  
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/original%20prime%20add%20threads.png)
 
-Usage of better isPrime function and threads:
-![image](https://github.com/annapinchuk/thread_safe_prime_counter/assets/78349342/7469aae7-d38b-42b8-96ae-4923b8b236a1)
+Screenshot with 10M numbers checked by our solution better prime function and threads  + time </br>   
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/new%20peime%20and%20threads%20.png)
 
 ## RAM space:
-As we can see in the image the memory usage is 7.5 KB.
-![image](https://github.com/annapinchuk/thread_safe_prime_counter/assets/78349342/761e8cc7-b80c-489a-92a7-ac95ee0cd186)
+In each image you can see that the "Maximum resident set size (kbytes):" dose not exeed 2000 kbytes  = 2 MB   
+
+## How to run
+**Note: the code MyPrimeCounter is set to run the optimal prime function but if you want you can change to the original**
+1. ``` make all ```
+2. original: ``` ./randomGenerator 10 10000000 | time -v ./primeCounter ```
+3. optimized: ``` ./randomGenerator 10 10000000 | time -v ./MyPrimeCounter ```
+
