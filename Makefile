@@ -7,7 +7,7 @@ CFLAGS = -std=c11 -O2
 CXXFLAGS = -std=c++11 -O2 -pthread
 
 # Target executables
-TARGETS = randomGenerator primeCounter liav anna MyPrimeCounter
+TARGETS = randomGenerator primeCounter MyPrimeCounter
 
 .PHONY: all clean
 
@@ -25,7 +25,7 @@ primeCounter: primeCounter.c
 	$(CC) -o primeCounter primeCounter.c
 
 MyPrimeCounter: MyPrimeCounter.c
-	$(CC) -o MyPrimeCounter MyPrimeCounter.c
+	$(CC) -o MyPrimeCounter MyPrimeCounter.c -pthread
 
 # Clean rule to remove generated files
 clean:
