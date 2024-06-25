@@ -6,45 +6,45 @@ intrusion should be detected.</br>
 In this assignment, we will use a random number generator that simulates the endless stream. The task is to count the number of prime numbers in this stream.</br>
 
 File explanation:</br>
-**generator.c:**    
-This file will create random numbers that simulate the endless stream. We will be piping the output from this program to the next file.   
+**generator.c:**</br>
+This file will create random numbers that simulate the endless stream. We will be piping the output from this program to the next file.</br>
 
-**primeCounter.c**    
-This is the initial code given. This will get the endless stream from compiling and running generator.c and for every number, check if it is a prime number and sum the amount of primes.   
+**primeCounter.c**</br>
+This is the initial code given. This will get the endless stream from compiling and running generator.c and for every number, check if it is a prime number and sum the amount of primes.</br>
 
-**MyPrimeCounter.c**    
-This is my code that is the solution to the assignment given:   
-isPrime function: the original function given.      
-is_prime function: is my new function for checking prime numbers.     
-Threads function: to manage the threads.    
-main function: to run it all.   
-**Note: when running this code you need to change in it the prime function you want to run !!**
+**MyPrimeCounter.c**</br>
+This is my code that is the solution to the assignment given:</br>
+isPrime function: the original function given.</br>
+is_prime function: is my new function for checking prime numbers.</br>
+Threads function: to manage the threads.</br>
+main function: to run it all.</br>
+**Note: when running this code you need to change in it the prime function you want to run !!**</br>
 
-**Makefile**
-Running ``` make all ``` will create the following files we can run:   
-randomGenerator: this is the runnable file connected to generator.c ``` ./randomGenerator <seed> <num_of_numbers> ```      
-primeCounter: this is the runnable file connected to primeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./primeCounter ```   
-MyPrimeCounter: this is the runnable file connected to MyPrimeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./MyPrimeCounter ```   
+**Makefile**</br>
+Running ``` make all ``` will create the following files we can run:</br>
+randomGenerator: this is the runnable file connected to generator.c ``` ./randomGenerator <seed> <num_of_numbers> ```</br>
+primeCounter: this is the runnable file connected to primeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./primeCounter ```</br>
+MyPrimeCounter: this is the runnable file connected to MyPrimeCounter.c ``` ./randomGenerator <seed> <num_of_numbers> | ./MyPrimeCounter ```</br>
 
-## This repository involves
+## This repository involves</br>
 a) The best solution code. </br>
 and in the README: </br>
 
 ## Time improvement:
 Screenshot with 10M numbers checked by the provided primeCounter.c + time </br>   
-![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/all%20original.png)
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/all%20original.png)</br>
 
 Screenshot with 10M numbers checked by MyPrimeCounter.c with the original prime function + threads + time. This is around 4 times better. </br>  
-![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/original%20prime%20add%20threads.png)
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/original%20prime%20add%20threads.png)</br>
 
 Screenshot with 10M numbers checked by our solution's better prime function and threads + time. This is around 10 times better. </br>   
-![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/new%20prime%20and%20threads%20.png)
+![image](https://github.com/zeevfischer/PrimeCounter/blob/main/img/original%20prime%20add%20threads.png)</br>
 
-## RAM space:
-In each image, you can see that the "Maximum resident set size (kbytes)" does not exceed 2000 kbytes = 2 MB   
+## RAM space:</br>
+In each image, you can see that the "Maximum resident set size (kbytes)" does not exceed 2000 kbytes = 2 MB</br>
 
-## How to run
-**Note: the code MyPrimeCounter is set to run the optimal prime function but if you want you can change to the original**
-1. ``` make all ```
-2. original: ``` ./randomGenerator 10 10000000 | time -v ./primeCounter ```
-3. optimized: ``` ./randomGenerator 10 10000000 | time -v ./MyPrimeCounter ```
+## How to run</br>
+**Note: the code MyPrimeCounter is set to run the optimal prime function but if you want you can change to the original**</br>
+1. ``` make all ```</br>
+2. original: ``` ./randomGenerator 10 10000000 | time -v ./primeCounter ```</br>
+3. optimized: ``` ./randomGenerator 10 10000000 | time -v ./MyPrimeCounter ```</br>
