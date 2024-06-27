@@ -67,10 +67,10 @@ void* Threads(void* arg)
 int main()
 {
     int CPU_cores = sysconf(_SC_NPROCESSORS_ONLN);
-    printf("%d CPUs \n" ,CPU_cores);
+    //printf("%d CPUs \n" ,CPU_cores);
 
     int num_of_threads = CPU_cores / 2;
-    printf("number of threads: %d\n" ,num_of_threads);
+    //printf("number of threads: %d\n" ,num_of_threads);
 
     pthread_t threads[num_of_threads];
 
